@@ -6,16 +6,74 @@
   "build": {
     "development": {
       "developmentClient": true,
-      "distribution": "internal"
+      "distribution": "internal",
+      "android": {
+        "buildType": "apk",
+        "gradleCommand": ":app:assembleDebug"
+      },
+      "env": {
+        "APP_ENV": "development",
+        "EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY": "pk_test_ZGVsaWNhdGUta2l0ZS00LmNsZXJrLmFjY291bnRzLmRldiQ",
+        "EXPO_PUBLIC_MAPBOX_KEY": "pk.eyJ1IjoiamVmZmxpbmNvbG4iLCJhIjoiY2x5OTVoaXh1MG05MTJzc2F5cWMzeXB3YSJ9.hlvBfPhtmDYpMtWZnfiTSQ",
+        "EXPO_PUBLIC_SUPABASE_ANON_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVpdnZwaW9kaHBjbXFna2dvdHJqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjIyMDg5MTcsImV4cCI6MjAzNzc4NDkxN30.u4JBBMk_-x_pEawAOykHPGvl2O9BC5INQuenPCfIzjQ",
+        "EXPO_PUBLIC_SUPABASE_URL": "https://eivvpiodhpcmqgkgotrj.supabase.co"
+      }
+    },
+    "development-simulator": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "android": {
+        "buildType": "apk",
+        "gradleCommand": ":app:assembleDebug"
+      },
+      "ios": {
+        "simulator": true
+      },
+      "env": {
+        "APP_ENV": "development",
+        "EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY": "pk_test_ZGVsaWNhdGUta2l0ZS00LmNsZXJrLmFjY291bnRzLmRldiQ",
+        "EXPO_PUBLIC_MAPBOX_KEY": "pk.eyJ1IjoiamVmZmxpbmNvbG4iLCJhIjoiY2x5OTVoaXh1MG05MTJzc2F5cWMzeXB3YSJ9.hlvBfPhtmDYpMtWZnfiTSQ",
+        "EXPO_PUBLIC_SUPABASE_ANON_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVpdnZwaW9kaHBjbXFna2dvdHJqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjIyMDg5MTcsImV4cCI6MjAzNzc4NDkxN30.u4JBBMk_-x_pEawAOykHPGvl2O9BC5INQuenPCfIzjQ",
+        "EXPO_PUBLIC_SUPABASE_URL": "https://eivvpiodhpcmqgkgotrj.supabase.co"
+      }
     },
     "preview": {
-      "distribution": "internal"
+      "distribution": "internal",
+      "android": {
+        "buildType": "apk",
+        "gradleCommand": ":app:assembleRelease"
+      },
+      "developmentClient": true,
+      "env": {
+        "APP_ENV": "preview",
+        "EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY": "pk_test_bGliZXJhbC13aGlwcGV0LTc0LmNsZXJrLmFjY291bnRzLmRldiQ",
+        "EXPO_PUBLIC_MAPBOX_KEY": "pk.eyJ1IjoiamVmZmxpbmNvbG4iLCJhIjoiY2x5OTVoaXh1MG05MTJzc2F5cWMzeXB3YSJ9.hlvBfPhtmDYpMtWZnfiTSQ",
+        "EXPO_PUBLIC_SUPABASE_ANON_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVpdnZwaW9kaHBjbXFna2dvdHJqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjIyMDg5MTcsImV4cCI6MjAzNzc4NDkxN30.u4JBBMk_-x_pEawAOykHPGvl2O9BC5INQuenPCfIzjQ",
+        "EXPO_PUBLIC_SUPABASE_URL": "https://eivvpiodhpcmqgkgotrj.supabase.co"
+      }
     },
     "production": {
-      "autoIncrement": true
+      "android": {
+        "buildType": "apk",
+        "gradleCommand": ":app:assembleRelease"
+      },
+      "autoIncrement": true,
+      "resourceClass": "medium",
+      "env": {
+        "APP_ENV": "production",
+        "EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY": "pk_test_ZGVsaWNhdGUta2l0ZS00LmNsZXJrLmFjY291bnRzLmRldiQ",
+        "EXPO_PUBLIC_MAPBOX_KEY": "pk.eyJ1IjoiamVmZmxpbmNvbG4iLCJhIjoiY2x5OTVoaXh1MG05MTJzc2F5cWMzeXB3YSJ9.hlvBfPhtmDYpMtWZnfiTSQ",
+        "EXPO_PUBLIC_SUPABASE_ANON_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVpdnZwaW9kaHBjbXFna2dvdHJqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjIyMDg5MTcsImV4cCI6MjAzNzc4NDkxN30.u4JBBMk_-x_pEawAOykHPGvl2O9BC5INQuenPCfIzjQ",
+        "EXPO_PUBLIC_SUPABASE_URL": "https://eivvpiodhpcmqgkgotrj.supabase.co"
+      }
     }
   },
   "submit": {
-    "production": {}
+    "production": {
+      "android": {
+        "track": "internal",
+        "releaseStatus": "draft"
+      }
+    }
   }
 }

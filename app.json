@@ -3,11 +3,11 @@
     "name": "my_moveeasy_app",
     "slug": "my_moveeasy_app",
     "version": "1.0.0",
-    "scheme": "my_moveeasy_app",
+    "scheme": "mymoveeasyapp",
     "web": {
       "bundler": "metro",
       "output": "static",
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/splash_icon_moveEasy.png"
     },
     "plugins": [
       "expo-router",
@@ -16,6 +16,34 @@
         {
           "launchMode": "most-recent"
         }
+      ],
+      [
+        "@rnmapbox/maps",
+        {
+          "RNMapboxMapsVersion": "11.0.0",
+          "RNMapboxMapsDownloadToken": "sk.eyJ1IjoiamVmZmxpbmNvbG4iLCJhIjoiY2x5N2ZlYm0yMDZjMTJxczkzdW16NGcxZCJ9.WgzmZZE3lvyY5uZfG2cEiQ"
+        }
+      ],
+      "expo-secure-store",
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow $(PRODUCT_NAME) to use your location."
+        }
+      ],
+      "expo-asset",
+      [
+        "expo-av",
+        {
+          "microphonePermission": "Allow $(PRODUCT_NAME) to access your microphone."
+        }
+      ],
+      [
+        "expo-video",
+        {
+          "supportsBackgroundPlayback": true,
+          "supportsPictureInPicture": true
+        }
       ]
     ],
     "experiments": {
@@ -23,10 +51,10 @@
       "tsconfigPaths": true
     },
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/splash_icon_moveEasy.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/splash_icon_moveEasy.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -34,7 +62,12 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSMerchantIdentifier": [
+          "merchant.com.mymoveeasyapp"
+        ]
+      }
     },
     "android": {
       "adaptiveIcon": {
